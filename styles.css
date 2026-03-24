@@ -1,94 +1,250 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    background-color: #f5fff5;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
-header {
-    background-color: #4caf50;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4fdf7;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
-    text-align: center;
-    padding: 20px;
+    padding-bottom: 50px;
 }
 
-/* Contenido */
-main {
-    padding: 20px;
-}
-
-.info {
-    margin-bottom: 30px;
-}
-
-/* Lista */
-ul {
-    padding-left: 20px;
-}
-
-/* Formulario */
-.formulario form {
+.navbar {
     display: flex;
-    flex-direction: column;
-    max-width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(0, 0, 0, 0.12);
 }
 
-input, select {
-    margin-bottom: 10px;
-    padding: 8px;
-}
-
-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Footer */
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Navegación */
-nav {
-    background-color: #66bb6a;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Botones tipo moderno */
-nav a {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 20px;
-    background-color: white;
-    color: #4caf50;
-    text-decoration: none;
-    border-radius: 25px;
+.logo {
+    font-size: 30px;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
-/* Hover (cuando pasas el mouse) */
-nav a:hover {
-    background-color: #4caf50;
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
     color: white;
-    transform: scale(1.1);
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Efecto al hacer clic */
-nav a:active {
-    transform: scale(0.95);
+.menu a:hover {
+    color: #d1fae5;
 }
+
+.hero-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-texto h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.btn,
+.btn-secundario {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn {
+    background-color: white;
+    color: #16a34a;
+}
+
+.btn:hover {
+    background-color: #dcfce7;
+}
+
+.btn-secundario {
+    background-color: #16a34a;
+    color: white;
+}
+
+.btn-secundario:hover {
+    background-color: #15803d;
+}
+
+.seccion {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.titulo-seccion {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #166534;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    color: #15803d;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 8%;
+    background-color: #ecfdf5;
+    flex-wrap: wrap;
+}
+
+.beneficios-texto,
+.beneficios-img {
+    flex: 1;
+    min-width: 280px;
+}
+
+.beneficios-texto h2 {
+    font-size: 36px;
+    color: #166534;
+    margin-bottom: 20px;
+}
+
+.beneficios-texto p {
+    margin-bottom: 20px;
+}
+
+.beneficios-texto ul {
+    list-style: none;
+}
+
+.beneficios-texto li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.beneficios-img img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plan .precio {
+    font-size: 28px;
+    color: #16a34a;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.destacado {
+    border: 3px solid #22c55e;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #14532d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.footer-contenido h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.footer-contenido p {
+    margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-texto h2 {
+        font-size: 34px;
+    }
+
+    .titulo-seccion,
+    .beneficios-texto h2 {
+        font-size: 28px;
+    }
+
+    .destacado {
+        transform: scale(1);
+    }
+}
+
 
 /* Ajuste extra para el section */
 .formulario {
@@ -173,58 +329,4 @@ nav a:active {
 /* Click botón */
 .formulario button:active {
     transform: scale(0.95);
-}
-
-/* Footer */
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Sección de información */
-.info {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-/* Título */
-.info h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-/* Texto */
-.info p {
-    color: #555;
-    margin-bottom: 20px;
-    font-size: 16px;
-}
-
-/* Lista */
-.info ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Items como tarjetas */
-.info li {
-    background-color: #f1f8e9;
-    margin: 10px 0;
-    padding: 12px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-/* Hover bonito */
-.info li:hover {
-    background-color: #dcedc8;
-    transform: scale(1.05);
 }

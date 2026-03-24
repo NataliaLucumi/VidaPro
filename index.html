@@ -2,38 +2,114 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>VidaPro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidaPro | Hábitos Saludables</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>Hábitos Saludables</h1>
-    <p>Mejora tu calidad de vida</p>
-</header>
+    <header class="hero">
+        <nav class="navbar">
+            <h1 class="logo">VidaPro</h1>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitos">Hábitos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
 
-<nav>
-    <a href="index.html" class="activo">Inicio</a>
-    <a href="formulario.html">Formulario</a>
-</nav>
+        <div class="hero-contenido" id="inicio">
+            <div class="hero-texto">
+                <h2>Transforma tu vida con hábitos saludables</h2>
+                <p>
+                    En VidaPro te ayudamos a mejorar tu bienestar diario con rutinas,
+                    seguimiento de progreso y consejos para una vida más activa,
+                    equilibrada y saludable.
+                </p>
+                <a href="formulario.html" class="btn">Comenzar ahora</a>
+            </div>
+            <div class="hero-img">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Vida saludable">
+            </div>
+        </div>
+    </header>
 
-<main>
-    <section class="info">
-        <h2>¿Qué son los hábitos saludables?</h2>
-        <p>Son acciones que realizamos diariamente para mantener nuestro bienestar físico y mental.</p>
+    <main>
+        <section class="seccion" id="habitos">
+            <h2 class="titulo-seccion">Hábitos que puedes fortalecer</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Actividad Física</h3>
+                    <p>Rutinas diarias para mantenerte activo, mejorar tu energía y fortalecer tu cuerpo.</p>
+                </article>
+                <article class="card">
+                    <h3>Buena Alimentación</h3>
+                    <p>Consejos simples para llevar una dieta balanceada y mejorar tu rendimiento diario.</p>
+                </article>
+                <article class="card">
+                    <h3>Descanso Adecuado</h3>
+                    <p>Aprende a organizar tus horarios y mejorar la calidad de tu sueño cada noche.</p>
+                </article>
+            </div>
+        </section>
 
-        <ul>
-            <li>🥗 Comer saludable</li>
-            <li>🏃 Hacer ejercicio</li>
-            <li>😴 Dormir bien</li>
-            <li>💧 Tomar suficiente agua</li>
-        </ul>
-    </section>
-</main>
+        <section class="beneficios" id="beneficios">
+            <div class="beneficios-texto">
+                <h2>¿Por qué elegir VidaPro?</h2>
+                <p>
+                    Nuestra plataforma está diseñada para ayudarte a construir hábitos
+                    sostenibles y realistas. No se trata de cambios extremos, sino de
+                    mejorar poco a poco tu estilo de vida.
+                </p>
+                <ul>
+                    <li>Seguimiento de progreso</li>
+                    <li>Rutinas fáciles de aplicar</li>
+                    <li>Consejos de bienestar diario</li>
+                    <li>Diseño moderno y fácil de usar</li>
+                </ul>
+            </div>
+            <div class="beneficios-img">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" alt="Hábitos saludables">
+            </div>
+        </section>
 
-<footer>
-    <p>© 2026 VidaPro</p>
-</footer>
+        <section class="seccion planes" id="planes">
+            <h2 class="titulo-seccion">Nuestros planes</h2>
+            <div class="cards">
+                <article class="card plan">
+                    <h3>Básico</h3>
+                    <p class="precio">Gratis</p>
+                    <p>Acceso a consejos generales y seguimiento básico de hábitos.</p>
+                    <a href="#" class="btn-secundario">Elegir plan</a>
+                </article>
+
+                <article class="card plan destacado">
+                    <h3>Premium</h3>
+                    <p class="precio">$29.900</p>
+                    <p>Rutinas personalizadas, estadísticas de progreso y contenido exclusivo.</p>
+                    <a href="#" class="btn">Elegir plan</a>
+                </article>
+
+                <article class="card plan">
+                    <h3>Pro</h3>
+                    <p class="precio">$49.900</p>
+                    <p>Todo lo de Premium más mentorías y guía avanzada para tus objetivos.</p>
+                    <a href="#" class="btn-secundario">Elegir plan</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-contenido">
+            <h2>VidaPro</h2>
+            <p>Plataforma enfocada en bienestar, disciplina y crecimiento personal.</p>
+            <p>Email: contacto@vidapro.com</p>
+            <p>Tel: +57 300 000 0000</p>
+        </div>
+    </footer>
 
 </body>
 </html>
