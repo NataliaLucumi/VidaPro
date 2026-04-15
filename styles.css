@@ -17,34 +17,93 @@ body {
     padding-bottom: 50px;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: rgba(0, 0, 0, 0.12);
+/* Estilos base del Navbar */
+.navbar-vidapro {
+  position: sticky; /* Se queda fijo arriba */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(29, 163, 74, 0.9); /* Verde con transparencia */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque detrás (Glassmorphism) */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+/* Logo */
+.navbar-vidapro .logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -1px;
 }
 
-.menu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
+/* Enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
 }
 
-.menu a:hover {
-    color: #d1fae5;
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative; /* Necesario para el efecto de la línea */
+  transition: opacity 0.3s;
+}
+
+/* Efecto de línea inferior al pasar el mouse */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  opacity: 0.9;
+}
+
+/* Estilo especial para el botón de Contacto */
+.btn-contacto {
+  background: white;
+  color: #1da34a !important;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: bold !important;
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.btn-contacto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-contacto::after {
+  display: none; /* Quitamos la línea para el botón */
 }
 
 .hero-contenido {
@@ -245,88 +304,296 @@ footer {
     }
 }
 
-
-/* Ajuste extra para el section */
-.formulario {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* Sección formulario */
-.formulario {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Contenedor General */
+.form-container-section {
+  padding: 60px 20px;
+  background-color: #f0f7f4; /* Verde muy pálido de fondo */
+  display: flex;
+  justify-content: center;
 }
 
-/* Título */
-.formulario h2 {
-    margin-bottom: 20px;
-    color: #2e7d32;
+/* La Tarjeta Blanca */
+.form-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-title {
+  color: #1b5e20;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Grupos de campos */
+.field-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.field-group label {
+  display: block;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Inputs y Selects */
+.field-group input, 
+.field-group select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #1e293b;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #fdfdfd;
+}
+
+/* Efecto Focus (Cuando haces clic) */
+.field-group input:focus, 
+.field-group select:focus {
+  border-color: #4caf50;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1);
+}
+
+/* Estilo del Botón */
+.btn-guardar {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-guardar:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-guardar:active {
+  transform: translateY(0);
+}
+/* Cursor personalizado */
+.cursor {
+  width: 25px;
+  height: 25px;
+  background: rgba(3, 87, 28, 0.7);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s linear;
+  z-index: 9999;
+}
+
+/* Contenedor Raíz para evitar conflictos */
+.pricing-footer-section {
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f8f4; /* Fondo verde muy claro para toda la zona */
+}
+
+/* --- ESTILO DE LAS CARDS --- */
+.planes-container {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.planes-title {
+  color: #064e3b;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 24px;
+  width: 280px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Tarjeta destacada (Premium) */
+.plan-card.featured {
+  border: 2px solid #10a37f;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(16, 163, 127, 0.1);
+}
+
+.plan-card h3 {
+  color: #064e3b;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #10a37f;
+  margin-bottom: 20px;
+}
+
+.plan-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Esto hace que todos los botones se alineen abajo */
+}
+
+.plan-btn {
+  background-color: #10a37f;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.plan-btn:hover {
+  background-color: #0d8a6a;
+}
+
+/* --- ESTILO DEL FOOTER --- */
+.main-footer {
+  background-color: #1da34a; /* El verde oscuro de tu imagen */
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.beneficios-section {
+  padding: 80px 20px;
+  background-color: #e8f5e9; /* El verde clarito de tu fondo */
+  display: flex;
+  justify-content: center;
+}
+
+.beneficios-container {
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Para que sea responsivo */
+}
+
+/* Contenido de texto */
+.beneficios-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.beneficios-title {
+  color: #1b5e20;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.beneficios-desc {
+  color: #445544;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Lista de beneficios */
+.beneficios-list {
+  list-style: none;
+  padding: 0;
+}
+
+.beneficios-list li {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #1b5e20;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.beneficios-list .icon {
+  margin-right: 15px;
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Estilo de la imagen */
+.beneficios-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.beneficios-image img {
+  width: 100%;
+  border-radius: 30px; /* Bordes redondeados modernos */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.beneficios-image img:hover {
+  transform: scale(1.02); /* Efecto sutil al pasar el mouse */
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+  .beneficios-container {
+    flex-direction: column;
     text-align: center;
-}
-
-/* Caja del formulario */
-.formulario form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Labels */
-.formulario label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 10px;
-    color: #333;
-}
-
-/* Inputs y select */
-.formulario input,
-.formulario select {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-/* Efecto focus */
-.formulario input:focus,
-.formulario select:focus {
-    border-color: #4caf50;
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
-}
-
-/* Botón */
-.formulario button {
-    margin-top: 15px;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
-    background-color: #4caf50;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Hover botón */
-.formulario button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Click botón */
-.formulario button:active {
-    transform: scale(0.95);
+  }
+  
+  .beneficios-list li {
+    justify-content: center;
+  }
 }
